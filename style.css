@@ -1,0 +1,51 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css');
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+
+        .day-cell {
+            min-height: 80px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .day-cell:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .day-cell.other-month {
+            cursor: default;
+        }
+
+        .day-cell.other-month:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .event-item {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.7rem;
+        }
+
+        .event-item:hover {
+            transform: scale(1.02);
+        }
+
+        .event-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .day-number {
+            font-weight: 600;
+        }
+
+        .calendar-container {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
